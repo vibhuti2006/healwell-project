@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Symptom Analysis</title>
+  <link rel="stylesheet" href="symptom-checker.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="find-doctor.html">Find a Hospital</a>
+    <a href="symptom-checker.html">
+      <vibhuti>Symptom Checker</vibhuti>
+    </a>
+  </nav>
+  <section class="symptom-checker" id="symptom-checker">
+    <h2><i class="fa-solid fa-stethoscope"></i> Symptom Analysis</h2>
+    <input type="text" id="symptoms" placeholder="Describe your symptoms" />
+    <button id="analyzeBtn">
+
+      <span class="button-text">Analyze Symptoms</span>
+      <div class="loader-div">
+        <div class="loader"></div>
+      </div>
+
+    </button>
+
+    <div id="diagnosis-result">
+      
+    </div>
+  </section>
+
+</body>
+
+<script src="symptom-checker.js"></script>
+
+</html>

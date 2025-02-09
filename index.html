@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealWell</title>
+    <link rel="stylesheet" href="index.css" />
+
+ 
+  </head>
+  <body>
+    <nav>
+      <a href="#home"><vibhuti>Home</vibhuti></a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+      <a href="find-doctor.html">Find a Hospital</a>
+      <a href="symptom-checker.html">Symptom Checker</a>
+    </nav>
+
+    <section class="hero" id="home">
+      <div>
+        <h1>Welcome to HealWell</h1>
+        <p>Your Health, Our Priority</p>
+        <button onclick="bookAppointment()">Manage Appointments</button>
+      </div>
+    </section>
+
+    <div class="container">
+      
+      <section id="about" class="about-section">
+        <div class="about-container">
+          <div class="about-header">
+            <span class="subtitle">Who We Are</span>
+            <h2>Connecting You with Healthcare Excellence</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card">
+              <div class="icon">🏥</div>
+              <h3>Network of Excellence</h3>
+              <p>
+                Access our vast network of 30,000+ premier hospitals across the
+                country, ensuring quality healthcare is always within reach.
+              </p>
+            </div>
+
+            <div class="about-card">
+              <div class="icon">🔍</div>
+              <h3>Smart Search</h3>
+              <p>
+                Find the perfect hospital based on your needs with our advanced
+                search system. Filter by specialty, location, availability, and
+                patient reviews.
+              </p>
+            </div>
+
+            <div class="about-card">
+              <div class="icon">🤖</div>
+              <h3>AI-Powered Support</h3>
+              <p>
+                Our intelligent symptom checker provide 24/7
+                guidance, helping you make informed decisions about your health.
+              </p>
+            </div>
+
+            <div class="about-card">
+              <div class="icon">📅</div>
+              <h3>Seamless Booking</h3>
+              <p>
+                Book appointments instantly with our real-time scheduling
+                system. Manage your healthcare journey with just a few clicks.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">30K+</span>
+              <span class="stat-label">Hospitals</span>
+            </div>
+
+            <div class="stat-item">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Support</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Electronic City, Bengaluru</p>
+        <p>Email: abc@healwell.com</p>
+      </section>
+    </div>
+
+
+
+    <script>
+      // Google Calendar Integration
+      function bookAppointment() {
+        window.open(
+          "https://calendar.google.com/calendar/u/0/r/eventedit?text=Hospital+Appointment"
+        );
+      }
+
+ 
+      // Intersection Observer for section animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      // Observe all sections
+      document.querySelectorAll("section").forEach((section) => {
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>
